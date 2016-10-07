@@ -1,0 +1,30 @@
+*
+{
+	margin:0;
+	padding:0;
+}
+
+body
+{
+	background-color:#7BA3BE;
+	font-family:verdana;
+	font-size:12px;
+}
+
+h1
+{
+	font:18pt verdana;
+	margin-left:10px;
+}
+.altColor tr:nth-child(even) { /*(even) or (2n+0)*/
+	background: #86cefd;
+}
+.altColor tr:nth-child(odd) { /*(odd) or (2n+1)*/
+	background: #BCE4FE;
+}
+
+.altColor { width:90%; border-collapse:collapse;   }
+.altColor td {
+	padding: 4px;
+	border:  1px solid;
+}	

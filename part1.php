@@ -1,6 +1,7 @@
 <?php
-$font = $_POST["font"];
-
+//if(isset($_POST['submit'])){
+//	$font = $_POST["font"];
+//}
 ?>
 
 
@@ -19,24 +20,31 @@ textarea {
 	height: 120px;
 	border: 3px solid #cccccc;
 	padding: 5px;
-
-	font-family: 
-	<?php
-	switch ($font) {
-    case "times":
-        echo "Times New Roman";
-        break;
-    case "sans":
-        echo "sans-serif";
-        break;
-    case "arial":
-        echo "arial";
-        break;
-    case "courier":
-        echo "courier";
-        break;
-	}
 	
+	<?php
+	
+	if(isset($_POST['submit'])){
+		echo "font-family: ";
+		switch ($_POST["font"]) {
+		case "times":
+			echo "Times New Roman";
+			break;
+		case "sans":
+			echo "sans-serif";
+			break;
+		case "arial":
+			echo "arial";
+			break;
+		case "courier":
+			echo "courier";
+			break;
+		}
+		echo ";";
+		echo "color: " . $_POST["font-color"] . ";";
+		echo "background-color: " . $_POST["background-color"] . ";";
+		echo "font-size: " . ($_POST["font-size"] * 2) . "px;";
+		
+	}
 	?>;
 	
 }
@@ -64,18 +72,20 @@ textarea {
 	
 	<h2>Font Size (Between 8 and 20)<h3>
 	<!--<input type="number" name="quantity" min="8" max="24">-->
-	8<input type="range" name="font-size" min="0" max="6">20
+	8<input type="range" name="font-size" min="4" max="12">24
 	
 	<h2>Font Color</h2>
 	<select name="font-color">
-		<option value="times">red</option>
-		<option value="sans">blue</option>
-		<option value="arial">green</option>
-		<option value="courier">orange</option>
+		<option value="black">black</option>
+		<option value="red">red</option>
+		<option value="blue">blue</option>
+		<option value="green">green</option>
+		<option value="orange">orange</option>
 	</select>
 	
 	<h2>Background Color</h3>
 	<select name="background-color">
+		<option value="white">white</option>
 		<option value="Beige">beige</option>
 		<option value="Gainsboro">light gray</option>
 		<option value="GreenYellow">green-yellow</option>
