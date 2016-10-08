@@ -1,10 +1,3 @@
-<?php
-//if(isset($_POST['submit'])){
-//	$font = $_POST["font"];
-//}
-?>
-
-
 <!DOCTYPE html>
 <html>
 <head>
